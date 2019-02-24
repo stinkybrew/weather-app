@@ -8,6 +8,8 @@ it('renders without crashing', () => {
   ReactDOM.unmountComponentAtNode(div);
 });
 
+
+// FOR UPCOMING TEST...MABY.
 const STATUS = {
   HOVERED: 'hovered',
   NORMAL: 'normal',
