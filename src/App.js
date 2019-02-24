@@ -7,7 +7,6 @@ class App extends Component {
     image:"",
     location:"",
     error:"",
-    list: []
   }
   handleClick = async(e) => {
     // Get weather button handler
@@ -27,7 +26,7 @@ class App extends Component {
       });
     }
     else {
-      // set states to "", if error is given
+      // sets states to "", if error is given
       this.setState({
         image:"",
         humidity:"",
@@ -37,23 +36,32 @@ class App extends Component {
       });
     }
   }
-  saveClick = () => {
-    // save weather-data button to localstorage
-    // const sdata = this;
-    var fs = require(this.state.temp);
-    localStorage.setItem("location", this.state.location)
-    localStorage.setItem("temp", this.state.temp)                      
-    localStorage.setItem("humid", this.state.humidity)
-    localStorage.setItem("weatherimg", this.state.image)
 
-    // save data to .txt file
-    fs.writeFile('saveddata.txt', this.state.temp, function (err) {    
-        if (err) 
-          return console.log(err);
-        console.log('file was saved!');
-    }); 
+  displayData = async (c) => {
+  
+    // Display saved data
+    try {
+      const datas = await localStorage.getItem("datas");
+      const parser = JSON.parse(datas);
+      alert(parser.datas);
+    }
+    catch (error) {
+      alert(error);
+    }
   } 
-
+  
+  saveClick = async (a) => {
+    a.preventDefault();
+    // save weather-data to localstorage
+    let obj = {
+      location: this.state.location,
+      temperature: this.state.temp,
+      humidity: this.state.humidity,
+      imagew: this.state.image
+    }
+    localStorage.setItem("datas", JSON.stringify(obj));
+  }
+  
   render() {
     return (
       <div className="container">
@@ -68,12 +76,13 @@ class App extends Component {
           {this.state.temp!==''?
           <div id="bck"><div className="row">
             <div className="col-md-4"></div>
-            <div className="col-md-4"><center><h4><b>{this.state.location}</b></h4><img src={this.state.image} width="100px" height="100px"/>sää<h3 id="h1">Temperature: {this.state.temp}&deg;c<br></br>Humidity: {this.state.humidity}</h3></center></div>
+            <div className="col-md-4"><center><h4><b>{this.state.location}</b></h4><img alt="saa" src={this.state.image} width="100px" height="100px"/><h3 id="h1">Temperature: {this.state.temp}&deg;c<br></br>Humidity: {this.state.humidity}</h3></center></div>
           </div></div>:''}
-
-          <form onClick={this.saveClick}>
-            <button  id="buttonz" className="btn btn-dark">Save result's to storage</button>
+          <form>
+            <button onClick={this.saveClick} className="btn btn-dark">Save result's to storage</button>
+            <button onClick={this.displayData} className="btn btn-dark">display saved data</button>
           </form>
+       
         </div> 
       </center>
       </div>

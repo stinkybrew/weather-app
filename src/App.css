@@ -11,6 +11,11 @@
 margin-bottom: 10px;
 }
 
+.btn-dark {
+  margin-bottom: 10px;
+  margin-left: 10px;
+  }
+
 .App {
   text-align: center;
 }
