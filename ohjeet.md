@@ -29,6 +29,16 @@ cd my-app
 npm start
 
 
+Code
+----------
+
+After opening weather-app in your browser you'll see 5 interactive elements
+- input1 (city)
+- input2 (country)
+- button1 ()
+- button2 ()
+- button3 ()
+
 Contribute
 ----------
 
