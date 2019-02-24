@@ -6,7 +6,7 @@ class App extends Component {
     temp: "",
     humidity: "",
     image: "",
-    location: undefined,
+    location: "",
     error: ""
   }
   handleClick = async(e) => {
@@ -28,7 +28,7 @@ class App extends Component {
       });
     }
     else {
-      // Gives error if theres a problem in inputs
+      // Gives error if theres a empty input field
       this.setState({
         error:"Please fill the empty input fields"
       });
@@ -50,6 +50,7 @@ class App extends Component {
   
   render() {
     return (
+      // rendered to html page
       <div className="container">
       <center>
       <img  src={backimg} width="100%" alt="weathers"/>
