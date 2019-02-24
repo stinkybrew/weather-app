@@ -82,7 +82,7 @@ class App extends Component {
           {this.state.temp!==''?
           <div id="bck"><div className="row">
             <div className="col-md-4"></div>
-            <div className="col-md-4"><center><h4><b>{this.state.location}</b></h4><img alt="saa" src={this.state.image} width="100px" height="100px"/><h3 id="h1">Temperature: {this.state.temp}&deg;c<br></br>Humidity: {this.state.humidity}</h3></center></div>
+            <div className="col-md-4"><center><h4><b>{this.state.location}</b></h4><img alt="saa" src={this.state.image} width="80px" height="80px"/><h3 id="h1">Temperature: {this.state.temp}&deg;c<br></br>Humidity: {this.state.humidity}</h3></center></div>
           </div></div>:''}
           <form>
             <button onClick={this.saveClick} className="btn btn-dark">Save result to storage</button>
