@@ -24,16 +24,16 @@ Open installed Node.js Commandprompt and enter following lines one by one.
 
 After opening weather-app on your browser you'll see heading text's and 4 interactive elements
 
-- input1 (city)
+- input1 (city)<br>
     Enter city which weather you whant to get.
     
-- input2 (country)
+- input2 (country)<br>
     Enter country which weather you whant to get.
     
-- button1 (get weather forecast)
+- button1 (get weather forecast)<br>
     Pressing this button gets the weather forecast from city you'vv enterd to input1.
     
-- button2 (save result to storage)
+- button2 (save result to storage)<br>
     This button saves weather data to localstorage.
 
 ## Testing
