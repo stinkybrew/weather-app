@@ -29,7 +29,7 @@ class App extends Component {
         });
       }
       else {
-        // if 1 of the inputs are incorrect
+        // if 1 of the inputs is incorrect
         this.setState({
           temp: "",
           humidity: "",
