@@ -1,6 +1,7 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 
 ## Available Scripts
+
 
 In the project directory, you can run:
 
@@ -17,52 +18,57 @@ You will also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.<br>
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## weather-app
+==============
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+$weather-app is a app where you can observe weather forecast of eny city.
+in this readme.md, we'll guid you how to get to use of weather-app.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Look how easy it is to use:
 
-### `npm run eject`
+    import project
+    # Get your stuff done
+    project.do_stuff()
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Features
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Be awesome
+- Make things faster
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Installation
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+To use weather-app project you'll need Node.js. It is downloadable from [Node.js webpage](https://nodejs.org/en/) .
+Next you'll need to create React App to your local drive and start it on your default browser:
 
-## Learn More
+Open installed Node.js Commandprompt and enter following lines one by one.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+npx create-react-app my-app
+cd my-app
+npm start
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Code
 
-### Code Splitting
+After opening weather-app in your browser you'll see 4 interactive elements
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+- input1 (city)
+    Enter city wich weather you whant to get.
+- input2 (country)
+    Enter country wich weather you whant to get.
+- button1 (get weather forecast)
+    Pressing this button gets the weather forecast from city you'vv enterd to input1.
+- button2 (save result to storage)
+    This button saves weather data to localstorage.
 
-### Analyzing the Bundle Size
+## Contribute
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+[Source Code](git@github.com:stinkybrew/weather-app.git)
 
-### Making a Progressive Web App
+## Support
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+If you are having issues, please let us know.
+We have a mailing list located at: wille.tuovinen@gmail.com
 
-### Advanced Configuration
+## License
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+The project is licensed under the [BSD license](https://en.wikipedia.org/wiki/BSD_licenses)
