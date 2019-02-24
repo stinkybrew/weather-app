@@ -16,20 +16,36 @@ class App extends Component {
     const city = e.target.elements.city.value;
     const country = e.target.elements.country.value;
     if(city && country){
-      // if city and country are inserted correctly...
       const api = await fetch(`http://api.wunderground.com/api/${apiKey}/conditions/q/${country}/${city}.json`); 
       const data = await api.json();
-      this.setState({
-        temp: data.current_observation.temp_c,
-        humidity: data.current_observation.relative_humidity,
-        image: data.current_observation.icon_url,
-        location: data.current_observation.display_location.full,
-        error: ""
-      });
+      if (data.response.current_observation || !data.response.error) {
+        // if city and country are inserted correctly...
+        this.setState({
+          temp: data.current_observation.temp_c,
+          humidity: data.current_observation.relative_humidity,
+          image: data.current_observation.icon_url,
+          location: data.current_observation.display_location.full,
+          error: ""
+        });
+      }
+      else {
+        // if 1 of the inputs is incorrect
+        this.setState({
+          temp: "",
+          humidity: "",
+          image: "",
+          location: "",
+          error: "Please fill input fields correctly"
+        });
+      }
     }
     else {
       // Gives error if theres a empty input field
       this.setState({
+        temp: "",
+        humidity: "",
+        image: "",
+        location: "",
         error:"Please fill the empty input fields"
       });
     }
