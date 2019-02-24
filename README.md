@@ -7,7 +7,7 @@ in this README.md, we'll guide you how to get to use of this magnifisent beast o
 
 ## Features
 
-In this project we are using basic bootstrap css.
+In this project we are using basic bootstrap css to get some sparkling's to visuals.
 
 ## Installation
 
