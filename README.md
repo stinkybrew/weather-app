@@ -25,10 +25,10 @@ Open installed Node.js Commandprompt and enter following lines one by one.
 After opening weather-app on your browser you'll see heading text's and 4 interactive elements
 
 - input1 (city)
-    Enter city wich weather you whant to get.
+    Enter city which weather you whant to get.
     
 - input2 (country)
-    Enter country wich weather you whant to get.
+    Enter country which weather you whant to get.
     
 - button1 (get weather forecast)
     Pressing this button gets the weather forecast from city you'vv enterd to input1.
