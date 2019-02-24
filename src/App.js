@@ -36,19 +36,6 @@ class App extends Component {
       });
     }
   }
-
-  displayData = async (c) => {
-  
-    // Display saved data
-    try {
-      const datas = await localStorage.getItem("datas");
-      const parser = JSON.parse(datas);
-      alert(parser.datas);
-    }
-    catch (error) {
-      alert(error);
-    }
-  } 
   
   saveClick = async (a) => {
     a.preventDefault();
@@ -60,6 +47,7 @@ class App extends Component {
       imagew: this.state.image
     }
     localStorage.setItem("datas", JSON.stringify(obj));
+    alert("Weather data saved to localstorage");
   }
   
   render() {
@@ -71,7 +59,7 @@ class App extends Component {
           <form onSubmit={this.handleClick}>
             <input type="text" placeholder="enter city" id="City" name="city" className="form-control"></input><br></br>
             <input type="text" placeholder="enter country" id="Country" name="country" className="form-control"></input><br></br>
-            <button className="btn btn-info">Get weatherforecast</button>
+            <button className="btn btn-outline-primary">Get weatherforecast</button>
           </form>
           {this.state.temp!==''?
           <div id="bck"><div className="row">
@@ -79,10 +67,8 @@ class App extends Component {
             <div className="col-md-4"><center><h4><b>{this.state.location}</b></h4><img alt="saa" src={this.state.image} width="100px" height="100px"/><h3 id="h1">Temperature: {this.state.temp}&deg;c<br></br>Humidity: {this.state.humidity}</h3></center></div>
           </div></div>:''}
           <form>
-            <button onClick={this.saveClick} className="btn btn-dark">Save result's to storage</button>
-            <button onClick={this.displayData} className="btn btn-dark">display saved data</button>
+            <button onClick={this.saveClick} className="btn btn-dark">Save result to storage</button>
           </form>
-       
         </div> 
       </center>
       </div>
