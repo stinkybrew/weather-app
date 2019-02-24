@@ -29,7 +29,7 @@ class App extends Component {
         });
       }
       else {
-        // if 1 of the inputs is incorrect
+        // if 1 of the inputs are incorrect
         this.setState({
           temp: "",
           humidity: "",
@@ -66,7 +66,7 @@ class App extends Component {
   
   render() {
     return (
-      // rendered to html page
+      // render to html page
       <div className="container">
       <center>
       <img  src={backimg} width="100%" alt="weathers"/>
