@@ -11,14 +11,12 @@ In this project we are using basic bootstrap css to get some sparkling's to visu
 
 ## Installation
 
-To use weather-app project you'll need Node.js. It is downloadable from [Node.js webpage](https://nodejs.org/en/) .<br>
-Next you'll need to create React App to your local drive and start it on your default browser:
+To use weather-app project you'll need Node.js. It is downloadable from [Node.js webpage](https://nodejs.org/en/).
 
-Open installed Node.js Commandprompt and enter following lines one by one.
+Open installed Node.js Commandprompt, locate eather-app project. Example C:\Users\username\React_projects\weather-app and then enter following lines one by one.
 
-'npx create-react-app my-app'
-'cd my-app'
-'npm start'
+'npm install'   :This command install node dependecies and it takes few minutes to install those.
+'npm start'     :This command starts the project and opens it in your default browser.
 
 ## How to use the app
 
