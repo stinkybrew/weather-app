@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "./App.css";
 import backimg from './images/night_helsinki.jpg';
+import apiKey from './key/weather-app-apiKey.js'
+
 class App extends Component {
   state = {
     temp: "",
@@ -13,7 +15,7 @@ class App extends Component {
   handleClick = async(e) => {
     // Get weather button handler
     e.preventDefault();
-    let apiKey = 'dfc5767820ab571ce33752e1e3d938cb';
+    //let apiKey = key           
     const city = e.target.elements.city.value;
     //const country = e.target.elements.country.value;
     //if(city && country){
