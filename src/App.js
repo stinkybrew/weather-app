@@ -3,6 +3,7 @@ import "./App.css";
 import backimg from './images/night_helsinki.jpg';
 import apiKey from './key/weather-app-apiKey.js'
 
+const KtoC = 273.15
 class App extends Component {
   state = {
     temp: "",
@@ -14,18 +15,15 @@ class App extends Component {
   }
   handleClick = async(e) => {
     // Get weather button handler
-    e.preventDefault();
-    //let apiKey = key           
+    e.preventDefault();        
     const city = e.target.elements.city.value;
-    //const country = e.target.elements.country.value;
-    //if(city && country){
     if(city){
       const api = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${apiKey}`) 
       const data = await api.json();
       console.log(data)
       //if (data.response || !data.response.error) {
       if (data.name) {  
-        // if city and country are inserted correctly...
+        // if city is inserted correctly...
         this.setState({
           temp: data.main.temp,
           humidity: data.main.humidity,
@@ -95,8 +93,8 @@ class App extends Component {
             <div className="col-md-4">
               <center><h4><b>{this.state.location}</b></h4>
               <h4 id="h2">{this.state.description}<img alt="icon" src={this.state.image} width="80px" height="80px"/></h4>
-              <h4 id="h2" pattern="^\d*(\.\d{0,2})?$">Temperature: {(this.state.temp - 273.15).toFixed(1) }&deg;c
-              <br></br>Humidity: {this.state.humidity}</h4></center>
+              <h4 id="h2" pattern="^\d*(\.\d{0,2})?$">Temperature: {(this.state.temp - KtoC).toFixed(1) }&deg;c
+              <br></br>Humidity: {this.state.humidity}&#37;</h4></center>
             </div>
           </div></div>:''}
           <form>
