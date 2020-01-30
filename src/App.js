@@ -84,7 +84,7 @@ class App extends Component {
           <form onSubmit={this.handleClick}>
             <input type="text" placeholder="enter city" id="City" name="city" className="form-control"></input><br></br>
             
-            <button className="btn btn-outline-primary">Get weatherforecast</button>
+            <button className="btn btn-outline-primary">Get weather forecast</button>
           </form>
           {this.state.error!==''?<div className="alert alert-danger" role="alert">{this.state.error}</div>:''}
           {this.state.temp !==''?
