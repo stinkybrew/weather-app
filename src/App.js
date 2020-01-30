@@ -20,10 +20,8 @@ class App extends Component {
     //const country = e.target.elements.country.value;
     //if(city && country){
     if(city){
-      const api2 = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${apiKey}`)
-      //console.log(api2)
-      //const api = await fetch(`http://api.wunderground.com/api/${apiKey}/conditions/q/${country}/${city}.json`); 
-      const data = await api2.json();
+      const api = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${apiKey}`) 
+      const data = await api.json();
       console.log(data)
       //if (data.response || !data.response.error) {
       if (data.name) {  
