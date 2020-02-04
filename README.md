@@ -25,9 +25,6 @@ After opening weather-app on your browser you'll see heading text's and 4 intera
 - input1 (city)<br>
     Enter city which city weather you whant to get.
     
-- input2 (country)<br>
-    Enter country which countrys city weather you whant to get.
-    
 - button1 (get weather forecast)<br>
     Pressing this button gets the weather forecast from city you'vv enterd to input1.
     
