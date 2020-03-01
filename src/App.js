@@ -30,7 +30,6 @@ class App extends Component {
           image: `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`,
           location: data.name,
           description: data.weather[0].description,
-          error: ""
         });
       }
       else {
