@@ -31,10 +31,6 @@ class App extends Component {
       else {
         // if 1 of the inputs is incorrect
         this.setState({
-          temp: "",
-          humidity: "",
-          image: "",
-          location: "",
           error: "Please fill input fields correctly"
         });
       }
@@ -42,10 +38,6 @@ class App extends Component {
     else {
       // Gives error if theres a empty input field
       this.setState({
-        temp: "",
-        humidity: "",
-        image: "",
-        location: "",
         error:"Please fill the empty input fields"
       });
     }
